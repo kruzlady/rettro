@@ -233,7 +233,7 @@ export default function PointsContent() {
                       title={i18n.t(i18n.l.points.points.your_rank)}
                       mainText={`#${data?.points?.user?.stats?.position?.current}`}
                       icon="􀉬"
-                      subtitle={i18n.t(i18n.l.points.points.out_of_x, {
+                      subtitle={i18n.t(i18n.l.points.points.of_x, {
                         totalUsers: (data?.points?.leaderboard?.stats
                           ?.total_users as number).toLocaleString('en-US'),
                       })}
