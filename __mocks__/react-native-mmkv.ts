@@ -10,6 +10,18 @@ const GLOBAL_SHARED_STORAGE: {
  * Based on the provided MMKV mock, but with global memory support to match actual MMKV usage.
  *
  * @see https://github.com/mrousavy/react-native-mmkv/blob/77982c1a61a5e6d2683e6569ca92e09390b28c48/src/createMMKV.mock.ts
+ */import type { NativeMMKV } from 'react-native-mmkv';
+
+type MMKVValue = string | boolean | number;
+
+const GLOBAL_SHARED_STORAGE: {
+  [key: string]: Map<string, MMKVValue>;
+} = {};
+
+/**
+ * Based on the provided MMKV mock, but with global memory support to match actual MMKV usage.
+ *
+ * @see https://github.com/mrousavy/react-native-mmkv/blob/77982c1a61a5e6d2683e6569ca92e09390b28c48/src/createMMKV.mock.ts
  */
 export class MMKV implements NativeMMKV {
   id: string = 'default';
